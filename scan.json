@@ -1,13 +1,56 @@
 [
   {
-    "id": "1",
-    "name": "Ruang Tamu ",
-    "ip": "10.20.88.6",
-    "SerialNumber": "VE6749087FTCW",
-    "FirmwareVersion": "2.4",
+    "name": "IP-camera",
+    "ip": "10.20.88.3",
     "username": "admin",
     "password": "admin123",
-    "rtsp": "rtsp://admin:admin123@10.20.88.6:10554/tcp/av0_1",
-    "rtsp1": "rtsp://admin:admin123@10.20.88.6:10554/tcp/av0_0"
+    "SerialNumber": "VE6749087FTCW",
+    "FirmwareVersion": "2.4",
+    "rtsp": "rtsp://admin:admin123@10.20.88.3:10554/tcp/av0_1",
+    "rtsp1": "rtsp://admin:admin123@10.20.88.3:10554/tcp/av0_0",
+    "id": "1"
+  },
+  {
+    "id": "2",
+    "name": "IP-camera",
+    "ip": "10.20.88.3",
+    "username": "admin",
+    "password": "admin123",
+    "xaddr": "http://10.20.88.3:10080/onvif/device_service",
+    "manufacturer": "IP camera",
+    "model": "IP Camera",
+    "firmwareVersion": "2.4",
+    "serialNumber": "VE6749087FTCW",
+    "rtspRecord": "rtsp://admin:admin123@10.20.88.3:10554/tcp/av0_1",
+    "rtspPreview": "rtsp://admin:admin123@10.20.88.3:10554/tcp/av0_0",
+    "rtspRecordParsed": {
+      "protocol": "rtsp",
+      "host": "10.20.88.3",
+      "port": 10554,
+      "path": "/tcp/av0_1",
+      "segments": [
+        "tcp",
+        "av0_1"
+      ],
+      "streamType": "tcp",
+      "streamName": "av0_1",
+      "username": "admin",
+      "password": "admin123"
+    },
+    "rtspPreviewParsed": {
+      "protocol": "rtsp",
+      "host": "10.20.88.3",
+      "port": 10554,
+      "path": "/tcp/av0_0",
+      "segments": [
+        "tcp",
+        "av0_0"
+      ],
+      "streamType": "tcp",
+      "streamName": "av0_0",
+      "username": "admin",
+      "password": "admin123"
+    },
+    "url": "rtsp://10.20.88.3:10554/tcp/av0_0"
   }
 ]
