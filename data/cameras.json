@@ -1,13 +1,3 @@
 [
-  {
-    "id": "1",
-    "name": "Ruang Tamu ",
-    "ip": "10.20.88.6",
-    "SerialNumber": "VE6749087FTCW",
-    "FirmwareVersion": "2.4",
-    "username": "admin",
-    "password": "admin123",
-    "rtsp": "rtsp://admin:admin123@10.20.88.6:10554/tcp/av0_1",
-    "rtsp1": "rtsp://admin:admin123@10.20.88.6:10554/tcp/av0_0"
-  }
+
 ]
