@@ -1,0 +1,42 @@
+<div class="grid mt-5">
+  
+  <body class="bg-light">
+    <div class="container mt-3">
+      <h3 class="mb-4 text-center">📷 Daftar Kamera ONVIF</h3>
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th class="text-center">No</th>
+            <th class="text-center">Nama</th>
+            <th class="text-center">IP Address</th>
+            <!-- <th class="text-center">Port</th> -->
+            <th class="text-center">Link video RTSP</th>
+            <th class="text-center">Serial Number</th>
+            <th class="text-center" colspan="2">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="cameraTable">
+          <% if (result.length === 0) { %>
+          <tr>
+            <td colspan="7" class="text-center">Camera tidak ditemukan</td>
+          </tr>
+          <% } else { %>
+          <% result.forEach((cam, i) => { %>
+          <tr>
+            <td class="text-center"><%= i + 1 %></td>
+            <td class="text-center"><%= cam.name %></td>
+            <td class="text-center"><%= cam.xaddr %></td>
+            <!-- <td class="text-center"><%= cam.port %></td> -->
+            <td class="text-center"><%= cam.url %></td>
+            <td class="text-center"><%= cam.serialNumber %></td>
+            <td class="text-center"><a href="/camera/add/<%= cam.id %>" class="btn btn-primary badge">Add To List</a></td>
+            <td class="text-center"><a href="/live" class="btn btn-primary badge">view stream</a></td>
+          </tr>
+          <% }) %>
+          <% } %>
+        </tbody>
+      </table>
+   
+      <div class="col-md-12"><a href="/scan" id="btnScan"class="btn btn-success text-center">🔍 Scan IP Cam</a></div>
+
+<!-- <script src="js/script.js"></script> -->

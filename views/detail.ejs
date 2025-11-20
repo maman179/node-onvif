@@ -1,0 +1,24 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Detail Camera</h2>
+                <% if (!camera) { %>
+                    <div class="alert alert-danger fw-bold" role="alert" >
+  camera tidak ditemukan <a href="/contact" class="alert-link fw-light"><br>&laquo; Kembali</a>
+</div>
+        <% } else { %>
+        <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">Camera Name : <%= camera.name %></h6><br>
+    <h6 class="card-subtitle mb-2 text-muted">Link RTSP : <%= camera.rtsp %></h6><br>
+    <h6 class="card-subtitle mb-2 text-muted">Kamera Type : <%= camera.SerialNumber %></h6><br>
+    <h6 class="card-subtitle mb-2 text-muted">Firmware Version : <%= camera.FirmwareVersion %></h6><br>
+        
+    <a href="/camera/edit/<%= camera.id %>" class="btn btn-info badge">edit</a>  
+    <a href="/camera/delete/<%= camera.id %>" class="btn btn-danger badge" onclick="return confirm('yakin hapus data?')">delete</a>      
+    <a href="/list" class="card-link d-block mt-3">&laquo; Kembali </a>
+  </div>
+</div>
+<% } %>
+</div>
+
