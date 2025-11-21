@@ -4,7 +4,7 @@
   <script>
     Swal.fire({
       icon: 'success',
-      title: 'Berhasil!',
+      title: 'success!',
       text: '<%= msg %>',
       timer: 2000,
       showConfirmButton: false
@@ -29,7 +29,7 @@
     <div class="card-body p-2">
       <% if (cameras.length < 1) { %>
         <div class="p-4 text-center">
-          <h4 class="text-muted">Kamera Tidak Ditemukan</h4>
+          <h4 class="text-muted">Camera Not Found</h4>
         </div>
       <% } else { %>
         <div class="table-responsive">
@@ -37,9 +37,9 @@
             <thead class="bg-primary mt-3">
               <tr>
                 <th class="text-center">No</th>
-                <th class="text-center">Nama Camera</th>
+                <th class="text-center">Name</th>
                 <th class="text-center">IP Address</th>
-                <th class="text-center">Keterangan</th>
+                <th class="text-center">Info</th>
               </tr>
             </thead>
             <tbody>

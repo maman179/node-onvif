@@ -1,7 +1,7 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="text-center">Form Tambah Camera</h2>
+            <h2 class="text-center">Form Add Camera</h2>
             <% if (typeof errors !='undefined') { %>
              <div class="alert alert-danger" role="alert">
                     <ul>
@@ -15,7 +15,7 @@
 <form method="post" action="/camera">
   <div class="mb-3">
     <input type="hidden" class="form-control" id="id"  name="id" value="<%= camera.id %>" required>
-    <label for="nama" class="form-label">Masukan Nama Camera</label>
+    <label for="nama" class="form-label">Camera Name</label>
     <input type="text" class="form-control" id="name"  name="name" value="<%= camera.name %>" required>
     <input type="hidden" class="form-control" id="protocol"  name="protocol" value="<%= camera.rtspPreviewParsed.protocol %>" required>
     <input type="hidden" class="form-control" id="port"  name="port" value="<%= camera.rtspPreviewParsed.port %>" required>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="mb-3">
-    <label for="nama" class="form-label">Masukan IP Camera</label>
+    <label for="nama" class="form-label">IP Camera</label>
     <input type="text" class="form-control" id="ip"  name="ip" value="<%= camera.ip %>" required>
   </div>
 
@@ -40,12 +40,12 @@
   
   <div class="mb-3">
     <label for="nama" class="form-label">User Name</label>
-    <input type="text" class="form-control" id="username"  name="username" value="admin" required>
+    <input type="text" class="form-control" id="username"  name="username" placeholder="example : admin" required>
   </div>
 
   <div class="mb-3">
     <label for="nama" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password"  name="password" value="admin123" required>
+    <input type="password" class="form-control" id="password"  name="password" placeholder="example : admin" required>
   </div>
 
   <button type="submit" class="btn btn-success">Save</button>
